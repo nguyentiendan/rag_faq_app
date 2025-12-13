@@ -1,5 +1,4 @@
-RAG-based FAQ Application - Implementation Plan
-Goal
+# Goal
 Build a RAG-based FAQ application where users can upload documents (PDF, DOC) and ask questions via a chat interface. The system uses Next.js for the frontend, FastAPI for the backend, and LangChain for the RAG pipeline.
 
 1. High-Level Architecture
@@ -10,19 +9,20 @@ RAG Engine (LangChain): Orchestrates document loading, splitting, embedding, and
 Vector Store (ChromaDB/FAISS): Stores document embeddings for semantic search.
 LLM (OpenAI/Gemini): Generates answers based on retrieved context.
 
-RAG FAQ App - Walkthrough
-Prerequisites
-Node.js (v18+)
-Python (v3.9+)
-OpenAI API Key
-1. Backend Setup
+
+# Prerequisites
+- Node.js (v18+)
+- Python (v3.9+)
+- OpenAI API Key
+## 1. Backend Setup
 Navigate to the backend directory:
-cd rag_faq_app/backend
+```cd rag_faq_app/backend```
 Create a virtual environment (optional but recommended):
-python -m venv venv
+
+```python -m venv venv```
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 Install dependencies:
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 Set up environment variables:
 Create a .env file in rag_faq_app/backend.
 Add your OpenAI API Key:
@@ -30,7 +30,7 @@ OPENAI_API_KEY=sk-...
 Run the server:
 uvicorn app.main:app --reload
 The API will be available at http://localhost:8000.
-2. Frontend Setup
+## 2. Frontend Setup
 Navigate to the frontend directory:
 cd rag_faq_app/frontend
 Install dependencies (if not already done):
