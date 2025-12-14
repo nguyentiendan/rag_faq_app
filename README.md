@@ -40,6 +40,9 @@ Vector Store (ChromaDB / FAISS)
 LLM (OpenAI / Gemini)
 ```
 
+![Architecture Diagram](images/diagram.jpg)
+
+![System flow & Sequence Diagram](images/flow.jpg)
 ---
 
 ## 🧰 Tech Stack
@@ -112,6 +115,21 @@ npm run dev
 1. Upload document
 2. Ask questions
 3. Get grounded answers
+
+---
+## 🧪 Notes
+
+1. The vector database is stored locally in rag_faq_app/backend/chroma_db.
+2. Uploaded files are saved in rag_faq_app/backend/uploads.
+
+---
+
+## Need to improve
+- Metadata Filtering: Filter retrieval by filename/date.
+- Hybrid Search: Combine keyword search (BM25) with semantic search.
+- History Aware: Pass chat history to the LLM for context-aware follow-up questions.
+- Async Processing: Use background tasks (Celery/RQ) for processing large files to avoid blocking the API.
+- Source Highlighting: Return page numbers and highlight text in the UI.
 
 ---
 
